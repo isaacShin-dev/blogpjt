@@ -1,5 +1,5 @@
 <template>
-  <v-container  fluid="true">
+  <v-container  fluid>
       <div class="wrapper mx-5">
 
 

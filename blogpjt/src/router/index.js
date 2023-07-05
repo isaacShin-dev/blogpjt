@@ -7,10 +7,19 @@ const routes = [
         component: () => import('@/views/HomeView.vue')
     },
     {
-        path: '/works',
+        path: '/blog',
         name: 'works',
         component: () => import('@/views/WorkView.vue')
     },
+    {
+        path:'/create',
+        name:'create',
+        component: () => import('@/views/BlogCreateView.vue')
+    },
+    {
+        path: '/detail/:id',
+        name: 'detail',
+        component: () => import('@/views/BlogDetaiilView.vue')},
     {
         path: '/log',
         name: 'log',
