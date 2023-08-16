@@ -35,11 +35,11 @@
             <v-btn icon @click="toGit">
                 <v-icon>mdi-github</v-icon>
             </v-btn>
-            <v-btn @click="loginModal" v-if="!loginStatus">
-                <v-icon >mdi-login</v-icon>
+<!--            <v-btn @click="loginModal" v-if="!loginStatus">-->
+<!--                <v-icon >mdi-login</v-icon>-->
 
-            </v-btn>
-                <v-btn v-else @click="showUserModal">hello {{id}}</v-btn>
+<!--            </v-btn>-->
+<!--                <v-btn v-else @click="showUserModal">hello {{id}}</v-btn>-->
         </v-app-bar>
 
         <v-main>
@@ -98,6 +98,8 @@ import {ref, watch} from 'vue';
 import {router} from './router';
 import {useUserStore} from "@/stores/UserStore";
 
+
+
 export default {
     setup () {
         const theme = useTheme()
@@ -108,6 +110,7 @@ export default {
         const rememberMe = ref(false)
         const userModal = ref(false)
         const userStore = useUserStore()
+
         const loginStatus = ref(localStorage.getItem('access_token')? true : false)
 
 
@@ -171,7 +174,7 @@ export default {
         overflow-x: hidden;
         overflow-y: auto;
         background-color: rgba(0,0,0,0.5);
-        //display: none;
+        /*display: none;*/
     }
     .modal-area{
         position: relative;
@@ -196,7 +199,7 @@ export default {
         height: 100%;
         overflow-x: hidden;
         overflow-y: auto;
-        //background-color: rgba(0,0,0,0.5);
+        /*background-color: rgba(0,0,0,0.5);*/
     }
 
     @keyframes slideIn {
